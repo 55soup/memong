@@ -1,23 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { CopyToClipboard } from "react-copy-to-clipboard/src";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CopyToClipboard
+        className="Toram"
+        text="토람은행 123-456-7890"
+        onCopy={() => alert("클립보드에 복사되었습니다.")}
+      >
+        <text>클립보드에 복사될 텍스트</text>
+      </CopyToClipboard>
     </div>
   );
 }
